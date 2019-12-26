@@ -12,11 +12,17 @@ namespace WebFight.Models
     {
         [Key]
         public Guid Id_Pessoa { get; set; }
+
         [ForeignKey("CONTATO")]
         public int Contato_Id { get; set; }
+        [Required]
         public string Nome { get; set; }
+        [Required]
+        public string Sexo { get; set; }
+        public string Sexualidade { get; set; }
         [Display(Name = "Apelido")]
         public string NickName { get; set; }
+        [Required]
         [Display(Name = "Data de Nascimento")]
         [DataType(DataType.Date)]
         public DateTime DataNascimento { get; set; }
@@ -26,6 +32,7 @@ namespace WebFight.Models
         public long Cpf { get; set; }
         public float Peso { get; set; }
         public float Altura { get; set; }
+        [Required]
         public bool Competidor { get; set; }
         public System.IO.MemoryStream Ft_Avatar { get; set; }
     }

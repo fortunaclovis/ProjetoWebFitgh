@@ -11,11 +11,13 @@ namespace WebFight.Models
     {
         [Key]
         public Guid Id_Graduacao { get; set; }
-        [ForeignKey("Categoria")]
 
+        [Required]
+        [ForeignKey("Categoria")]
         public int Categoria_Id { get; set; }
         public virtual ICollection<Categoria> categoria { get; set; }
 
+        [Required]
         [Display(Name = "Data de Graduação")]
         [DataType(DataType.Date)]
         public DateTime DataGraduacao { get; set; }
