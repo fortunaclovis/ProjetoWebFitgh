@@ -13,8 +13,9 @@ namespace WebFight.Models
         [Key]
         public Guid Id_Pessoa { get; set; }
 
-        [ForeignKey("CONTATO")]
+        [ForeignKey("Contato")]
         public int Contato_Id { get; set; }
+        public virtual ICollection<Contato> ListaContatos { get; set; }
         [Required]
         public string Nome { get; set; }
         [Required]

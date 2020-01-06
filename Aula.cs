@@ -21,13 +21,19 @@ namespace WebFight.Models
 
         public enum DiaDaAula
         {
-            Domingo = 0,
-            Segunda = 1,
-            Terca = 2,
-            Quarta = 3,
-            Quinta = 4,
-            Sexta = 5,
-            Sabado = 6
+            Domingo,
+            [Display(Name = "Segunda-Feira")]
+            Segunda,
+            [Display(Name = "Terça-Feira")]
+            Terca,
+            [Display(Name = "Quarta-Feira")]
+            Quarta,
+            [Display(Name = "Quinta-Feira")]
+            Quinta,
+            [Display(Name = "Sexta-Feira")]
+            Sexta,
+            [Display(Name = "Sábado")]
+            Sabado
         }
     }
 }

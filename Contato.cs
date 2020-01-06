@@ -10,18 +10,26 @@ namespace WebFight.Models
     {
         [Key]
         public Guid Id_Contato { get; set; }
+
         [DataType(DataType.PhoneNumber)]
         public long Telefone { get; set; }
+
         [Required]
         [DataType(DataType.PhoneNumber)]
         public long Celular { get; set; }
+
         [DataType(DataType.Url)]
         public string Facebook { get; set; }
+
         [DataType(DataType.Url)]
         public string Instagram { get; set; }
+
         [Required]
         public string Endereço { get; set; }
+        public string Complemtento { get; set; }
+        [Required]
         public string Cidade { get; set; }
+        [Required]
         public string Estado { get; set; }
         [DataType(DataType.PostalCode)]
         public string CEP { get; set; }

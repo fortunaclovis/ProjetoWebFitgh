@@ -11,18 +11,23 @@ namespace WebFight.Models
     {
         [Key]
         public Guid Id_Professor { get; set; }
-        [ForeignKey("PESSOA")]
+
+        [Required]
+        [ForeignKey("Pessoa")]
         public int Pessoa_Id { get; set; }
-        //public virtual ICollection<Pessoa> pessoa { get; set; }
-        [ForeignKey("GRADUACAO")]
+        
+
+        [ForeignKey("Graduacao")]
         public int Graduacao_Id { get; set; }
-        //public virtual ICollection<GRADUACAO> graduacao { get; set; }
-        [ForeignKey("ACADEMIA")]
+        public virtual ICollection<Graduacao> HistoricoGraduacao { get; set; }
+
+        [Required]
+        [ForeignKey("Academia")]
         public int Academia_Id { get; set; }
-        //public virtual ICollection<ACADEMIA> academia { get; set; }
-        [ForeignKey("INSCRICAO")]
+        
+        [ForeignKey("Inscricao")]
         public int Inscricao_Id { get; set; }
-        //public virtual ICollection<Inscricao> inscricao { get; set; }
+        public virtual ICollection<Inscricao> ListaInscricao { get; set; }
 
     }
 }

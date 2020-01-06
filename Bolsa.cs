@@ -12,6 +12,7 @@ namespace WebFight.Models
         public Guid Id_Bolsa { get; set; }
         public int Percentual { get; set; }
 
+        [Required]
         [Display(Name = "Início da Bolsa")]
         [DataType(DataType.Date)]
         public DateTime DataInicio { get; set; }
