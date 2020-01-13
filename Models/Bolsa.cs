@@ -11,6 +11,8 @@ namespace WebFight.Models
         [Key]
         public Guid Id_Bolsa { get; set; }
         public int Percentual { get; set; }
+        // Id do usuário
+        public string OwnerID { get; set; }
 
         [Required]
         [Display(Name = "Início da Bolsa")]
@@ -20,5 +22,15 @@ namespace WebFight.Models
         [Display(Name = "Período")]
         [DataType(DataType.Duration)]
         public DateTime Periodo { get; set; }
+
+
+        public BolsaStatus Status { get; set; }
+    }
+
+    public enum BolsaStatus
+    {
+        Enviado,
+        Aprovado,
+        Rejeitado
     }
 }

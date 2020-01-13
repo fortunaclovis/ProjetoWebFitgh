@@ -90,6 +90,9 @@ namespace WebFight.Models
         [Key]
         public Guid Id_Categoria { get; set; }
 
+        // user ID from AspNetUser table.
+        public string OwnerID { get; set; }
+
         [Required]
         public Idade? Idade { get; set; }
         [Required]
@@ -98,5 +101,15 @@ namespace WebFight.Models
         public Faixas? Faixa { get; set; }
         [Required]
         public Grau? Grau { get; set; }
+
+        public CategoriaStatus Status { get; set; }
     }
+
+    public enum CategoriaStatus
+    {
+        Enviado,
+        Aprovado,
+        Rejeitado
+    }
+
 }
