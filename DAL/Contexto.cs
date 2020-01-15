@@ -1,5 +1,6 @@
 ﻿using WebFight.Models;
 using Microsoft.EntityFrameworkCore;
+using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace WebFight.DAL
 {
@@ -19,10 +20,15 @@ namespace WebFight.DAL
             public DbSet<Pagamento> Pagamentos { get; set; }
             public DbSet<Pessoa> Pessoas { get; set; }
             public DbSet<Professor> Professores { get; set; }
-            
+            public DbSet<Certificado> Certificados { get; set; }
+            public DbSet<ImagemPessoa> AvatarFotos { get; set; }
+
 
         //metodo para não pluralizar as classes de view e controler com base nos nomes da model
-        protected override void OnModelCreating(DbModelBuilder modelBuilder) => modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.using System.Data.Entity.ModelConfiguration.Conventions;
+        }
     }
     }
 }

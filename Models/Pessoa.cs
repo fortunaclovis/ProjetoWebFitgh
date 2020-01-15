@@ -16,6 +16,7 @@ namespace WebFight.Models
         [ForeignKey("Contato")]
         public int Contato_Id { get; set; }
         public virtual ICollection<Contato> ListaContatos { get; set; }
+
         [Required]
         public string Nome { get; set; }
         [Required]
@@ -35,6 +36,6 @@ namespace WebFight.Models
         public float Altura { get; set; }
         [Required]
         public bool Competidor { get; set; }
-        public System.IO.MemoryStream Ft_Avatar { get; set; }
+        public virtual ImagemPessoa Avatar { get; set; }
     }
 }
