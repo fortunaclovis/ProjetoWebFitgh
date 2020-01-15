@@ -1,0 +1,36 @@
+﻿@model WebFight.Models.Professor
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Professor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Pessoa_Id)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Pessoa_Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Graduacao_Id)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Graduacao_Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Academia_Id)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Academia_Id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id_Professor">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

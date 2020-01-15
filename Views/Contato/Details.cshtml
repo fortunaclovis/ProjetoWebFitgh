@@ -1,0 +1,78 @@
+﻿@model WebFight.Models.Contato
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Contato</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Telefone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Telefone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Celular)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Celular)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Facebook)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Facebook)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Instagram)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Instagram)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Endereço)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Endereço)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Complemtento)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Complemtento)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Cidade)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cidade)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Estado)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CEP)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CEP)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id_Contato">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

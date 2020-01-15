@@ -1,0 +1,54 @@
+﻿@model WebFight.Models.Categoria
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Categoria</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.OwnerID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OwnerID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Idade)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Idade)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Peso)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Peso)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Faixa)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Faixa)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Grau)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Grau)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id_Categoria">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

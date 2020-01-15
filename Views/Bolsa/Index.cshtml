@@ -1,0 +1,59 @@
+﻿@model IEnumerable<WebFight.Models.Bolsa>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Percentual)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.OwnerID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DataInicio)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Periodo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Status)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Percentual)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OwnerID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataInicio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Periodo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id_Bolsa">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id_Bolsa">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id_Bolsa">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

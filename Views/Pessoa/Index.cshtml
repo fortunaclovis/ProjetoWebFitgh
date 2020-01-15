@@ -1,0 +1,95 @@
+﻿@model IEnumerable<WebFight.Models.Pessoa>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Contato_Id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nome)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Sexo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Sexualidade)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NickName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DataNascimento)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Rg)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Cpf)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Peso)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Altura)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Competidor)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Contato_Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sexo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sexualidade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NickName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataNascimento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rg)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cpf)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Peso)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Altura)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Competidor)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id_Pessoa">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id_Pessoa">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id_Pessoa">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,41 @@
+﻿@model IEnumerable<WebFight.Models.Aula>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.HorarioInicial)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.HorarioFinal)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.HorarioInicial)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HorarioFinal)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id_Aula">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id_Aula">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id_Aula">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

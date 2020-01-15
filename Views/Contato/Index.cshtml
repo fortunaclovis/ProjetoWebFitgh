@@ -1,0 +1,89 @@
+﻿@model IEnumerable<WebFight.Models.Contato>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Telefone)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Celular)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Facebook)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Instagram)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Endereço)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Complemtento)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Cidade)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Estado)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CEP)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Email)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Celular)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Facebook)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Instagram)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Endereço)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Complemtento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cidade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CEP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id_Contato">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id_Contato">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id_Contato">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
